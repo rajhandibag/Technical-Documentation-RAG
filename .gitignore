@@ -27,3 +27,4 @@ data/processed/*
 
 # Keep source URL list
 !data/raw/urls.txt
+.env

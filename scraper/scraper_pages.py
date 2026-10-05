@@ -146,7 +146,15 @@ for i, url in enumerate(urls, start=1):
 
         text = body.get_text(
             "\n",
-            strip=True
+             strip=True
+        )
+
+        title = soup.title.get_text(strip=True) if soup.title else ""
+
+        text = (
+            f"Source: {url}\n"
+            f"Title: {title}\n\n"
+            f"{text}"
         )
 
         # --------------------------------
